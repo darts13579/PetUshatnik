@@ -1,10 +1,10 @@
 import * as React from "react";
 
 const Footer: React.FC = () => {
-    return <footer className="footer text-center">
-        <p>View on <a href="https://github.com/NickMaev/react-core-boilerplate">GitHub</a></p>
-        <p>Copyright (c) 2020 Nikolay Maev</p>
-        <p><a href="https://en.wikipedia.org/wiki/MIT_License">MIT License</a></p>
+    return <footer style={{bottom: 0}} className="footer text-center">
+        <p>Powered with <a href="https://marketplace.visualstudio.com/items?itemName=NikolayMaev.ReactCoreBoilerplate">ReactCore boilerplate</a></p>
+        <p>View on <a href="https://github.com/darts13579/PetUshatnik">GitHub</a></p>
+        <p>Copyright (c) 2021 Bulat Abdullin</p>
     </footer>;
 }
 

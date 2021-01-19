@@ -26,10 +26,14 @@
     <Content Remove="publish\**" />
     <Content Remove="wwwroot\**" />
     <Content Remove="ClientApp\**" />
+    <Compile Remove="wwwroot\dist\**" />
+    <Content Remove="wwwroot\dist\**" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="wwwroot\**" />
+    <None Remove="ClientApp\dist\main-server.js" />
+    <None Remove="wwwroot\dist\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -41,6 +45,7 @@
     <None Remove="obj\bin\**" />
     <None Remove="Properties\PublishProfiles\**" />
     <None Remove="publish\**" />
+    <EmbeddedResource Remove="wwwroot\dist\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -60,6 +65,17 @@
     <None Update="wwwroot\favicon.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\dist\e682f2c85b79d567bd665676071087b8.png" />
+    <_ContentIncludedByDefault Remove="wwwroot\dist\vendor-manifest.json" />
+    <_ContentIncludedByDefault Remove="wwwroot\dist\vendor.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\dist\vendor.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\dist\vendor.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\dist\vendor.js.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\dist\main-client.js" />
+    <_ContentIncludedByDefault Remove="wwwroot\dist\main-client.js.map" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And (!Exists('wwwroot\dist') OR Exists('wwwroot\dist\production_build')) ">
